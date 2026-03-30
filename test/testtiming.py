@@ -1,5 +1,24 @@
-from os import times
+#     The aim of the luhn module is to provide useful functions to calculate the check digit using the Luhn's
+#     algorithm.
+#
+#     Copyright (C) 2026  Marco Simone Zuppone - msz@msz.eu
+#
+#     This program is free software: you can redistribute it and/or modify
+#     it under the terms of the GNU Affero General Public License as published
+#     by the Free Software Foundation, either version 3 of the License, or
+#     (at your option) any later version.
+#
+#     This program is distributed in the hope that it will be useful,
+#     but WITHOUT ANY WARRANTY; without even the implied warranty of
+#     MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+#     GNU Affero General Public License for more details.
+#
+#     You should have received a copy of the GNU Affero General Public License
+#     along with this program.  If not, see <https://www.gnu.org/licenses/>.
+#     Please refer to the LICENSE file for more information about licensing
+#     and to README.md file for more information about the usage of it
 
+from os import times
 from luhn import luhn_digit
 import time, random
 
