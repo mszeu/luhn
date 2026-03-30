@@ -18,12 +18,12 @@
 #     Please refer to the LICENSE file for more information about licensing
 #     and to README.md file for more information about the usage of it
 
-def luhn_digit(conto: str) -> int:
+def luhn_digit(account_number: str) -> int:
     """Returns the check digit calculated with the Luhn's algorithm.
 
                     Parameters
                     ----------
-                    conto : str
+                    account_number : str
                         The account number to calculate the check digit for.
 
                     Returns
@@ -31,14 +31,14 @@ def luhn_digit(conto: str) -> int:
                     int
                         The check digit.
                     """
-    conto_reverse = conto[::-1]
+    account_number_reversed = account_number[::-1]
     somma = 0
-    for x in conto_reverse[::2]:
-        valore = int(x) * 2
-        if valore > 9:
-            valore = valore - 9
-        somma += valore
-    for x in conto_reverse[1:][::2]:
+    for x in account_number_reversed[::2]:
+        value = int(x) * 2
+        if value > 9:
+            value = value - 9
+        somma += value
+    for x in account_number_reversed[1:][::2]:
         somma += int(x)
     return (10-(somma%10))%10
 
